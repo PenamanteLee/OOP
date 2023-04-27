@@ -1,0 +1,48 @@
+package librarysystem;
+
+import java.awt.event.*;
+import java.awt.*;
+import javax.swing.*;
+
+public class Welcome extends javax.swing.JFrame{
+	
+	Welcome(){
+		
+		JFrame jf = new JFrame("");
+		
+		JLabel lbl = new JLabel("Welcome to NU Library System");
+		lbl.setBounds(50, 50, 900, 300);
+		lbl.setFont(new Font("Times New Roman", Font.PLAIN, 60));
+		jf.add(lbl);
+		
+		JButton btn = new JButton("LOGOUT");
+        btn.setBackground(Color.GRAY);
+        btn.setBounds(700, 500, 200, 40);
+        
+        btn.addActionListener(new ActionListener() {
+            @Override
+        
+        public void actionPerformed(ActionEvent e) {
+            
+            jf.dispose();
+            new LoginPage();
+
+            }
+        });
+
+		jf.add(btn);
+		jf.setSize(1000, 580);
+        jf.setLayout(null);
+        jf.setVisible(true);
+        jf.setResizable(false);
+        jf.setLocationRelativeTo(null);
+	}
+	
+	
+
+	public static void main(String[] args) {
+		new Welcome();
+
+	}
+
+}
