@@ -1,0 +1,55 @@
+package librarysystem;
+
+import java.awt.event.*;
+import java.awt.*;
+import javax.swing.*;
+
+import librarysystem.AdminLogin;
+import librarysystem.LibrarianLogin;
+
+public class LoginPage extends javax.swing.JFrame{
+	
+	LoginPage(){
+		
+		JFrame jf = new JFrame("Main Page");
+		
+		JLabel lbl = new JLabel("Library Management System");
+		lbl.setBounds(40, 50, 550, 340);
+		lbl.setFont(new Font("Times New Roman", Font.PLAIN, 40));
+		jf.add(lbl);
+		
+		JButton btn = new JButton("ADMIN LOGIN");
+		btn.setBounds(400, 300, 200, 40);
+		
+		JButton btn2 = new JButton("LIBRARIAN LOGIN");
+		btn2.setBounds(400, 350, 200, 40);;
+		
+		
+		
+		btn.addActionListener(new ActionListener() {
+			@Override
+			
+			public void actionPerformed(ActionEvent e) {
+				
+				jf.dispose();
+				AdminLogin hm = new AdminLogin();
+				hm.setVisible(true);
+			}
+		});
+		
+		
+		jf.add(btn);
+		jf.add(btn2);
+        jf.setSize(1000, 580);
+        jf.setLayout(null);
+        jf.setVisible(true);
+        jf.setResizable(false);
+        jf.setLocationRelativeTo(null);
+	}
+
+	public static void main(String[] args) {
+		new LoginPage();
+
+	}
+
+}
