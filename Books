@@ -1,0 +1,24 @@
+package librarysystem;
+
+import java.awt.event.*;
+import java.awt.*;
+import javax.swing.*;
+
+public class Books extends javax.swing.JFrame{
+	
+	Books(){
+		
+		JFrame jf = new JFrame("");
+		
+		JLabel lbl = new JLabel("Omniscient Reader's Viewpoint");
+		JLabel lbl2 = new JLabel("The S Classes That I Raised");
+		JLabel lbl3 = new JLabel("Trash of the Counts Family");
+		//NOT FINISHED
+	}
+
+	public static void main(String[] args) {
+		new Books();
+
+	}
+
+}
