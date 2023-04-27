@@ -1,0 +1,92 @@
+package librarysystem;
+
+import java.awt.event.*;
+import java.awt.*;
+import javax.swing.*;
+
+public class AdminLogin extends javax.swing.JFrame {
+
+	AdminLogin(){
+		
+		JFrame jf = new JFrame("");
+		
+		JLabel lbl = new JLabel("Admin Login");
+		lbl.setBounds(20, 20, 400, 300);
+		lbl.setFont(new Font("Times New Roman", Font.PLAIN, 30));
+		jf.add(lbl);
+		
+		JLabel unlb1 = new JLabel("Username");
+        unlb1.setBounds(595, 50, 150, 200);
+        jf.add(unlb1);
+        
+        JTextField txtUser = new JTextField("");
+        txtUser.setBounds(595, 170, 300, 40);
+        txtUser.setBackground(Color.WHITE);
+        jf.add(txtUser);
+
+        JLabel lb2 = new JLabel("Password");
+        lb2.setBounds(595, 50, 150, 370);
+        jf.add(lb2);
+       
+        JPasswordField txtPass = new JPasswordField("");
+        txtPass.setBounds(595, 255, 300, 40);
+        jf.add(txtPass);
+		
+        JButton btn = new JButton("LOGIN");
+        btn.setBackground(Color.GRAY);
+        btn.setBounds(595, 340, 300, 40);
+        
+        btn.addActionListener(new ActionListener() {
+            @Override
+            
+        public void actionPerformed(ActionEvent e) {
+            
+            String username = txtUser.getText();
+            String password = txtPass.getText();
+
+            if (username.equals("Admin_01") & password.equals("AdminOne")) {
+                JOptionPane.showMessageDialog(null, "SUCCESSFULLY LOGIN");
+                
+                jf.dispose();
+                Welcome hm = new Welcome();
+                hm.setVisible(true);
+                
+            }
+            else if (username.equals("Admin_02") & password.equals("AdminTwo")) {
+                JOptionPane.showMessageDialog(null, "SUCCESSFULLY LOGIN");
+                
+                jf.dispose();
+                Welcome hm = new Welcome();
+                hm.setVisible(true);
+                
+            }
+            else if (username.equals("Admin_03")& password.equals("AdminThree")) {
+            	JOptionPane.showMessageDialog(null, "SUCCESSFULLY LOGIN");
+            	
+            	jf.dispose();
+            	Welcome hm = new Welcome();
+                hm.setVisible(true);
+                
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Invalid Password or Username");
+            }
+
+        }
+    });
+        
+        jf.add(btn);
+        jf.setSize(1000, 580);
+        jf.setLayout(null);
+        jf.setVisible(true);
+        jf.setResizable(false);
+        jf.setLocationRelativeTo(null);
+		
+	}
+	public static void main(String[] args) {
+		new AdminLogin();
+		
+
+	}
+
+}
